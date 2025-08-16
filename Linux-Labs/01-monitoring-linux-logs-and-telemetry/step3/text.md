@@ -43,7 +43,7 @@ cat /etc/prometheus/prometheus.yaml
 Change the port used by the scraper
 
 ```plain
-sed 's/9090/9100/' /etc/prometheus/prometheus.yaml
+sed -i 's/9090/9100/' /etc/prometheus/prometheus.yaml
 ```{{exec}}
 
 Install vmagent
