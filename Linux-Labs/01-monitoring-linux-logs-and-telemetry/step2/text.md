@@ -12,7 +12,7 @@ Verify Node Exporter is running and exposing port 9100.
 Download and unpackage a current version of Node Exporter and move to the extracted folder.
 
 ```plain
-apt install -y prmometheus-node-exporter prometheus-node-exporter-collectors
+apt install -y prometheus-node-exporter prometheus-node-exporter-collectors
 ```{{exec}}
 
 Start Node Exporter
@@ -24,13 +24,13 @@ systemctl start prometheus-node-exporter
 Now that you've checked everything, make sure the daemon will restart after reboot.
 
 ```plain
-systemctl enable node_exporter.service --now
+systemctl enable prometheus-node-exporter.service.service --now
 ```{{exec}}
 
 Verify that Node Exporter is running and exposing the proper port.
 
 ```plain
-systemctl status node_exporter --no-pager
+systemctl status prometheus-node-exporter.service --no-pager
 sleep 2
 curl http://localhost:9100/metrics
 ```{{exec}}

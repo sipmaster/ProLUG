@@ -1,3 +1,3 @@
 #!/bin/bash
 
-systemctl status node_exporter.service --no-pager
+systemctl status prometheus-node-exporter.service --no-pager
