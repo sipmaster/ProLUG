@@ -24,7 +24,7 @@ tar xvfz victoria-metrics-linux-amd64-v1.123.0.tar.gz
 Start VictoriaMetrics
 
 ```plain
-nohup ./victoria-matrics-prod &
+nohup ./victoria-metrics-prod &
 ```{{exec}}
 
 Create a directory and copy over the configuration for prometheus

@@ -14,7 +14,7 @@ Create a dashboard (import 22759) that shows the logging information for your se
 
 Connect to Grafana and log in {{TRAFFIC_HOST1_3000}}
 
-Create the datasource for Prometheus in the the Datasource page. URL = http://127.0.0.1:9090 
+Create the datasource for Prometheus in the the Datasource page. URL = http://127.0.0.1:9428 
 
 Import the dashboard 22759 to view the metric data.
 

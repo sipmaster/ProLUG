@@ -24,7 +24,7 @@ systemctl start prometheus-node-exporter
 Now that you've checked everything, make sure the daemon will restart after reboot.
 
 ```plain
-systemctl enable prometheus-node-exporter.service.service --now
+systemctl enable prometheus-node-exporter.service --now
 ```{{exec}}
 
 Verify that Node Exporter is running and exposing the proper port.

@@ -48,6 +48,7 @@ One problem that will occur is that promtail will not be able to read the syslog
 
 ```plain
 cd /var/
+apt install acl
 setfacl -R -m u:promtail:rX log
 setfacl -R -m d:u:promtail:rX log
 systemctl start promtail
@@ -56,7 +57,7 @@ systemctl start promtail
 We need to change the url of the client where promtail will send the data.
 
 ```plain
-sed -i '/http\:\/\/localhost\:\/loki\/api\/v1\/push/http\:\/\/127\.0\.0\.1\:9428\/insert\/loki\/api\/v1\/push/'
+sed -i '/http\:\/\/localhost\:3100\/loki\/api\/v1\/push/c \-url\: http\:\/\/127\.0\.0\.1\:9428\/insert\/loki\/api\/v1\/push/' /etc/promtail/config.yml
 systemctl restart promtail
 ```{{exec}}
 
