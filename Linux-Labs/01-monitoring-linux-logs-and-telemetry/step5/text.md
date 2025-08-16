@@ -57,7 +57,7 @@ systemctl start promtail
 We need to change the url of the client where promtail will send the data.
 
 ```plain
-sed -i '/http\:\/\/localhost\:3100\/loki\/api\/v1\/push/c \-url\: http\:\/\/127\.0\.0\.1\:9428\/insert\/loki\/api\/v1\/push/' /etc/promtail/config.yml
+sed -i '/http\:\/\/localhost\:3100\/loki\/api\/v1\/push/c \- url\: http\:\/\/127\.0\.0\.1\:9428\/insert\/loki\/api\/v1\/push' /etc/promtail/config.yml
 systemctl restart promtail
 ```{{exec}}
 
